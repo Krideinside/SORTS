@@ -1,5 +1,6 @@
 package ru.netology.javaqa;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Ticket implements Comparable<Ticket> {

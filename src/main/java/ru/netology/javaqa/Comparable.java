@@ -1,5 +1,5 @@
 package ru.netology.javaqa;
 
-public interface Comparable<T> {
-    int compareTo(Ticket o);
+public interface Comparable<Ticket> {
+    int compareTo(Ticket t);
 }
