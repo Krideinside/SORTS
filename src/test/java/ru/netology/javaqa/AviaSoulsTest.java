@@ -8,8 +8,8 @@ public class AviaSoulsTest {
     Ticket t1 = new Ticket(
             "Москва",
             "Санкт-Петербург",
-            1200,
-            1300,
+            1500,
+            1000,
             1500
     );
 
@@ -43,5 +43,21 @@ public class AviaSoulsTest {
 
         Ticket[] tickets = { t1, t2 };
         Arrays.sort(tickets, priceComparator);
+    }
+
+    @Test
+    public void search(){
+        TicketPriceComparator priceComparator = new TicketPriceComparator();
+
+        Ticket[] tickets = {t1, t2};
+        Arrays.sort(tickets, priceComparator);
+    }
+
+    @Test
+    public void shouldSortByTime(){
+        TicketTimeComparator timeComparator = new TicketTimeComparator();
+
+        Ticket[] tickets = {t1, t2};
+        Arrays.sort(tickets, timeComparator);
     }
 }
