@@ -84,7 +84,7 @@ class AviaSoulsTest {
         Comparator<Ticket> comparator = new TicketTimeComparator();
 
         Ticket[] expected = {t4, t7, t8, t1, t5};
-        Ticket[] actual = manager.search("Москва", "Санкт-Петербург", comparator);
+        Ticket[] actual = manager.searchAndSortByTime("Москва", "Санкт-Петербург", comparator);
 
         Assertions.assertArrayEquals(expected, actual);
 
@@ -104,7 +104,7 @@ class AviaSoulsTest {
         Comparator<Ticket> comparator = new TicketTimeComparator();
 
         Ticket[] expected = {t2};
-        Ticket[] actual = manager.search("Казань", "Москва", comparator);
+        Ticket[] actual = manager.searchAndSortByTime("Казань", "Москва", comparator);
 
         Assertions.assertArrayEquals(expected, actual);
 
@@ -124,7 +124,7 @@ class AviaSoulsTest {
         Comparator<Ticket> comparator = new TicketTimeComparator();
 
         Ticket[] expected = {};
-        Ticket[] actual = manager.search("Дом", "Работа", comparator);
+        Ticket[] actual = manager.searchAndSortByTime("Дом", "Работа", comparator);
 
         Assertions.assertArrayEquals(expected, actual);
 
