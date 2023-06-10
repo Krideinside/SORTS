@@ -1,6 +1,5 @@
 package ru.netology.javaqa;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Ticket implements Comparable<Ticket> {
@@ -55,12 +54,14 @@ public class Ticket implements Comparable<Ticket> {
 
     @Override
     public int compareTo(Ticket t) {
-        if (this.price < t.price) {
-            return -1;
-        } else if (this.price > t.price) {
-            return 1;
-        } else {
-            return 0;
-        }
+//        if (price < t.getPrice()) {
+//            return -1;
+//        }
+//        if (price > t.getPrice()) {
+//            return 1;
+//        }
+//        return 0;
+
+        return price - t.getPrice();
     }
 }
